@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/apex/actions/slack"
+	"github.com/hinder90/actions/slack"
 )
 
 func main() {
