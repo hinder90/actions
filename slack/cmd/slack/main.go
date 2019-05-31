@@ -23,10 +23,10 @@ func main() {
 	}
 
 	// webhook
-	webhook := os.Getenv("SLACK_WEBHOOK_URL")
+	webhook := os.Getenv("DEPLOY_NOTIFY_SLACK_URL")
 
 	if webhook == "" {
-		log.Fatalf("Missing SLACK_WEBHOOK_URL environment variable")
+		log.Fatalf("Missing DEPLOY_NOTIFY_SLACK_URL environment variable")
 	}
 
 	// channel

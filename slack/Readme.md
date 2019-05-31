@@ -4,7 +4,7 @@ GitHub Action for sending Slack messages which were defined by previous action(s
 
 ## Secrets
 
-- `SLACK_WEBHOOK_URL` - *Required* The Slack webhook URL.
+- `DEPLOY_NOTIFY_SLACK_URL` - *Required* The Slack webhook URL.
 
 ## Environment Variables
 
@@ -37,7 +37,7 @@ action "Deploy" {
 action "Deploy Notification" {
   needs = "Deploy"
   uses = "apex/actions/slack@master"
-  secrets = ["SLACK_WEBHOOK_URL"]
+  secrets = ["DEPLOY_NOTIFY_SLACK_URL"]
 }
 ```
 

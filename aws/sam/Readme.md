@@ -36,7 +36,7 @@ action "Build" {
 action "Build Notification" {
   needs = "Build"
   uses = "apex/actions/slack@master"
-  secrets = ["SLACK_WEBHOOK_URL"]
+  secrets = ["DEPLOY_NOTIFY_SLACK_URL"]
 }
 
 action "Deploy" {
@@ -52,7 +52,7 @@ action "Deploy" {
 action "Deploy Notification" {
   uses = "apex/actions/slack@master"
   needs = ["Deploy"]
-  secrets = ["SLACK_WEBHOOK_URL"]
+  secrets = ["DEPLOY_NOTIFY_SLACK_URL"]
 }
 ```
 
